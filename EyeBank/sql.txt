@@ -1,0 +1,17 @@
+show databases;
+use eyebank;
+ALTER TABLE patientreg ADD password varchar(255);
+UPDATE patientreg SET password="123456" WHERE id=2;
+select * from PatientReg;
+create table DonorLoginPage(id int auto_increment,primary key(id),DonarName varchar(255),DonarAge int,Eye varchar(255),BP varchar(255),sugar varchar(255),power varchar(255));
+insert into DonorLoginPage (donarname,donarage,eye,bp,sugar,power)values("sathya",40,"left","akshya","45","left");
+select * from DonorLoginPage;
+
+update donorloginpage set eye="right",bp="no",sugar="no",power="no" where id=1;
+select * from admin;
+select * from patient;
+select * from PatientReg;
+update patientreg set eye="right",bp="no",sugar="no",eyepower="no" where id=1;
+create table PatientReg(id int auto_increment,primary key(id),patientName varchar(255),patientAge int,Eye varchar(255),BP varchar(255),sugar varchar(255),power varchar(255));
+insert into patientreg(patientname,patientage,eye,bp,sugar,power) values("sathiya",45,"left","normal","normal","normal");
+select * from admin;
